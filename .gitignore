@@ -1,0 +1,49 @@
+__pycache__/
+*.pyc
+*.db
+*.sqlite3
+.env
+static/uploads/
+static/cc_library/generated/
+node_modules/
+# === 資料庫檔案（改為存放於 instance/，不進版控）===
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# === 執行期產生的內容（使用者上傳、AI 生成、快取）===
+# 這些檔案目前因為要用 /static/ 網址直接服務給前端，暫時留在 static/ 內，
+# 但體積會持續成長，不該進 git，用 .gitignore 排除即可
+static/uploads/
+static/tryon_history/
+static/my_looks/
+static/my_wardrobe/
+static/ai_chat_suggestions/
+static/ai_pending/
+static/search_ref_cache/
+static/temp_pdf/
+static/cart/
+static/orders/
+static/generated_images/
+static/cc_library/*.json
+static/hair_library/
+
+# === 機密設定 ===
+.env
+.env.*
+!.env.example
+
+# === Python / 開發環境 ===
+__pycache__/
+*.pyc
+.venv/
+.idea/
+
+# === 手動備份（改用 git 分支/tag）===
+archive/
+backup/
+new/
+templates (2)/
+templates (3)/
+程式碼/
